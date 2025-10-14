@@ -69,9 +69,10 @@ li{
 
 #profile-pic{
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 110px;
     object-fit: cover;
+    border: 7px solid var(--mainBorderColor);
     
 }
 
