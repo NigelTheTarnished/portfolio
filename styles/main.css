@@ -19,6 +19,8 @@
     --mainLinkColor:var(--mainLinkColor-dark);
     --mainBorderColor:var(--mainBorderColor-dark);
     --mainBgColor:var(--mainBgColor-dark);
+
+    --accent: #7c3aed;
 }
 
 *{
@@ -31,6 +33,7 @@
 
 body{
     background-color: var(--mainBgColor);
+    font-family: 'Roboto', sans-serif;
 }
 
 p, span, li{
@@ -55,12 +58,16 @@ li{
 
 #wrapper--hero{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 4em;
+    gap: 0.5em; 
+    padding-top: 1em; 
+    padding-bottom: 1em; 
 }
 
 #user-name{
     font-size: 3em;
+    color: #FFD600; /* Bright yellow */
 }
 
 #bio, a{
@@ -69,11 +76,23 @@ li{
 
 #profile-pic{
     border-radius: 50%;
-    width: 200px;
-    height: 110px;
+    width: 270px;
+    height: 270px;
     object-fit: cover;
-    border: 7px solid var(--mainBorderColor);
     
+}
+
+@media (max-width: 600px) {
+    #wrapper--hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    #profile-pic {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 0.5em;
+    }
 }
 
 #email{
@@ -107,10 +126,30 @@ li{
     font-size: 0.9em;
 }
 
+.hover-text {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
 .card--techstack{
     border: 1px solid var(--mainBorderColor);
     padding: 0.5em 1em;
     border-radius: 5px;
+    position: relative; 
+}
+
+.card--techstack:hover .hover-text {
+    opacity: 1;
+    visibility: visible;
 }
 
 .card--work-history{
@@ -118,6 +157,7 @@ li{
     margin-top: 3em;
     margin-bottom: 3em;
     padding-left: 2em;
+    border-radius: 5px;
 }
 
 .line-break{
@@ -139,4 +179,94 @@ li{
 
 .card--project  a:hover{
     color: var(--mainLinkColor);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+  color: var(--accent);
+  font-family: 'Inter', 'Poppins', sans-serif; font-family: 'Inter', 'Poppins', sans-serif;
+  font-weight: 700;ight: 700;
+}
+a:hover {:hover {
+  color: var(--accent);  color: var(--accent);
+}
+
+.tech-tag:hover {
+  transform: scale(1.05);ale(1.05);
+  background: var(--accent); background: var(--accent);
+
+
+}  color: white;  color: white;
+}
+
+h1, h3 {
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+.profile-pic-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.profile-pic-glow {
+  position: absolute;
+  top: -10%; left: 0%;
+  transform: translate(-50%, -50%);
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  z-index: 0;
+}
+#profile-pic {
+  position: relative;
+  z-index: 1;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid var(--accent);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 2s steps(12, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent); }
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-right: 0.5em;
+  color: #fff;
+}
+.badge--primary { background: #7c3aed; }
+.badge--success { background: #22c55e; }
+.badge--info { background: #0da2b8; }
+
+.site-footer {
+  text-align: center;
+  padding: 2.5em 0;
+  color: #adb0b1;
+  font-size: 0.95em;
+  margin-top: 3em;
 }

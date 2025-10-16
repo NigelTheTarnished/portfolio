@@ -7,46 +7,64 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css">
+        <script src="scripts/fade-in.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     </head>
     <body>
         
         <div id="container--main">
             <section id="wrapper--hero" class="section-page">
-                <img id="profile-pic" src="./assets/images/Avatar-Icon.png" alt="" >
+                
 
                 <div>
-                    <h1 id="user-name">Nigel Robin</h1>
+                    <h1 id="user-name" class="typewriter">Nigel Robin</h1>
                     <p id="bio">Diploma-holder in Computer Programming with hands-on experience building applications using Javascript HTML/CSS, and Node.js</p>
-                    <p id="email">👉 nigelrobin19@gmail.com</p>
+                    
+                </div>
+
+                <div class="profile-pic-wrapper">
+                  <div class="profile-pic-glow"></div>
+                  <img id="profile-pic" src="./assets/images/Avatar-Icon.png" alt="" >
+                  
                 </div>
             </section>
 
             <section class="section--page">
                 <div id="socials-list"> 
-                    <a href="#" target="_blank">Youtube</a>
-                    <a href="#" target="_blank">Twitter</a>
+                    <a href="https://www.youtube.com/@TheThinkingBitbybit" target="_blank">Youtube</a>
+                    <a href="https://x.com/thethinkingbit" target="_blank">Twitter (X)</a>
                     <a href="https://www.linkedin.com/in/nigel-robin/" target="_blank">Linkedin</a>
                     <a href="https://github.com/NigelTheTarnished" target="_blank">Github</a>
                     <a href="assets\nigel-robin.pdf" target="_blank">Download Resume</a>
                 </div>
+                <p id="email"> Contact Me 👉 <a href="mailto:nigelrobin@email.com">nigelrobin19@gmail.com</a></p>
             </section>
 
             <section>
                 <h2>Skills and Qualifications</h2>
                 <ul>
-                    <li>✔️ Experience with front & backend development</li>
-                    <li>✔️ Extensive knowledge in API & Database Design.</li>
-                    <li>✔️ Implemented Git/Github Version Control in team projects. </li>
-                    <li>✔️ Self-taught new programming concepts and frameworks to complete projects ahead of deadlines.</li>
+                    <li>Experience with front & backend development</li>
+                    <li>Extensive knowledge in API & Database Design.</li>
+                    <li>Implemented Git/Github Version Control in team projects. </li>
+                    <li>Self-taught new programming concepts and frameworks to complete projects ahead of deadlines.</li>
                 </ul>
             </section>
 
             <section class="section--page">
                 <h2>Tech Stack</h2>
                 <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>Javascript, Node JS</span></div>   
-                    <div class="card--techstack"><span>React, Next JS</span></div>
-                    <div class="card--techstack"><span>Postgres, MongoDB, MySQL, Firebase</span></div>
+                    <div class="card--techstack">
+                        <span>Javascript, Node JS</span>
+                        <span class="hover-text">Programming Languages</span>
+                        </div>
+                                            <div class="card--techstack">
+                        <span>React, Next JS</span>
+                        <span class="hover-text">Frameworks</span>
+                        </div>
+                                            <div class="card--techstack">
+                        <span>Postgres, MongoDB, MySQL, Firebase</span>
+                        <span class="hover-text">Database</span>
+                        </div>
                 </div>
             </section>
 
@@ -59,9 +77,9 @@
                     <p>Pembroke Farmers Market</p>
                     <p class="work-duration">Jan 2025 - Apr 2025</p>
                     <ul>
-                        <li>✔️ Developed and maintained web applications using JavaScript, Node.js, and React.</li>
-                        <li>✔️ Collaborated with clients to gather requirements and deliver customized solutions.</li>
-                        <li>✔️ Implemented RESTful APIs and integrated third-party services.</li>
+                        <li>Developed and maintained web applications using JavaScript, Node.js, and React.</li>
+                        <li>Collaborated with clients to gather requirements and deliver customized solutions.</li>
+                        <li>Implemented RESTful APIs and integrated third-party services.</li>
                     </ul>
                 </div>  
                 
@@ -70,11 +88,11 @@
                     <p>Zeloura</p>
                     <p class="work-duration">July 2025 - Sep 2025</p>
                     <ul>
-                        <li>✔️ Designed and Developed a custom e-commerce platform for a client.</li>
-                        <li>✔️ Implemented secure payment gateway, product management system, order tracking, and pincode-based delivery estimation.</li>
-                        <li>✔️ Built and integrated a Firebase backend for real-time database management, authentication and hosting. </li>
-                        <li>✔️ Gained hands-on experience with version control systems like Git.</li>
-                        <li>✔️ Collaborated with client to translate business requirements into technical solutions.</li>
+                        <li>Designed and Developed a custom e-commerce platform for a client.</li>
+                        <li>Implemented secure payment gateway, product management system, order tracking, and pincode-based delivery estimation.</li>
+                        <li>Built and integrated a Firebase backend for real-time database management, authentication and hosting. </li>
+                        <li>Gained hands-on experience with version control systems like Git.</li>
+                        <li>Collaborated with client to translate business requirements into technical solutions.</li>
                     </ul>
 
             </section>
@@ -83,7 +101,7 @@
                 <h2>Projects & Accomplishments</h2>
 
                 <div class="card--project">
-                    <a href="project1.html" ><span>🏆 </span>Ecommerce platform using Razor API for payment integration</a>
+                    <a href="project1.html" ><span>🏆 </span>Data Visualization Dashboard</a>
                 </div>
 
             <!--    <div class="card--project"> 
@@ -91,6 +109,18 @@
                 </div> -->
 
             </section>
+            <section class="section--page">
+                <h2>Qualifications</h2>
+                <ul id="qualification--list">
+                <!--   <li><span class="badge badge--primary"></span></li>
+                  <li><span class="badge badge--success"></span></li> -->
+                  <li><span class="badge badge--info">Certification</span>Agile Methodology</li>
+                </ul>
+            </section>
+
+            <footer class="site-footer">
+                &copy; 2025 Nigel Robin &mdash; <a href="mailto:nigelrobin@email.com">Contact</a>
+            </footer>
         </div>
     </body>
 </html>
