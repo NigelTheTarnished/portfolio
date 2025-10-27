@@ -37,7 +37,6 @@ To deploy this project run
 
 ## License
 
-[MIT]
 MIT License
 
 Copyright (c) 2025 Nigel Robin
